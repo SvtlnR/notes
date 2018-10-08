@@ -1,0 +1,10 @@
+<div ng-controller="NotesController">
+	<h1>{{mes}}</h1>
+	<button class="btn" ng-click="go('/create')">Create new note</button>
+	<table>
+		<tr ng-repeat="note in notes">
+			<td><button class="noteTitle" ng-click="go('/edit/'+note.id)">{{note.data.title}}</button></td>
+			<td><button ng-click="delete(note.id)" class="deleteBtn">delete</button></td>
+		</tr>
+	</table>
+</div>

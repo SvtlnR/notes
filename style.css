@@ -1,0 +1,42 @@
+body {
+	background-color: #F5FFFA;
+	margin: 3%;
+}
+.title {
+	width: 30%;
+	margin: 8px;
+}
+.descrip {
+	width: 30%;
+	margin: 8px;
+}
+.noteTitle, .btn, .deleteBtn {
+	font-weight: 80%;
+	margin: 4px;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+	display: inline-block;
+}
+.noteTitle {
+	background: #C3E4D4;
+}
+.btn {
+	background: #40C781;
+}
+.deleteBtn {
+	background: #CD5C5C;
+}
+.btn:hover {
+	background: #35A76E;
+	cursor: pointer;
+}
+.noteTitle:hover {
+	background: #C8D6CF;
+	cursor: pointer;
+}
+.deleteBtn:hover {
+	background: #F08080;
+	cursor: pointer;
+}

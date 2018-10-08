@@ -1,0 +1,8 @@
+<div ng-controller="CreateNotesController">
+	<h1>Create new note</h1>
+	<input type="text" class="title" name="title" ng-model="note.ttl" value="New note"/><br/>
+	<textarea class="descrip" ng-model="note.description"></textarea><br/>
+	<div>{{errors}}</div>
+	<button class="btn" ng-click="go('/notes')">Back</button>
+	<button class="btn" ng-click="saveNote(note)">Save</button>
+</div>

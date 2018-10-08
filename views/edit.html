@@ -1,0 +1,8 @@
+<div ng-controller="EditNotesController">
+	<h1>Edit note</h1>
+	<input class="title" type="text" name="title" ng-model="note.data.title"/><br/>
+	<textarea class="descrip" ng-model="note.data.description"></textarea><br/>
+	<div>{{errors}}</div>
+	<button class="btn" ng-click="go('/notes')">Back</button>
+	<button class="btn" ng-click="saveNote(note)">Save</button>
+</div>
