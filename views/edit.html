@@ -1,8 +1,10 @@
 <div ng-controller="EditNotesController">
 	<h1>Edit note</h1>
-	<input class="title" type="text" name="title" ng-model="note.data.title"/><br/>
-	<textarea class="descrip" ng-model="note.data.description"></textarea><br/>
+	<p ng-show="!isEditing" ng-bind-html="titleConverted"></p>
+	<p ng-show="!isEditing" ng-bind-html="descripConverted"></p>
+	<input ng-show="isEditing" class="title" type="text" name="title" ng-model="note.data.title"/><br/>
+	<textarea ng-show="isEditing" class="descrip" ng-model="note.data.description"></textarea><br/>
 	<div>{{errors}}</div>
 	<button class="btn" ng-click="go('/notes')">Back</button>
-	<button class="btn" ng-click="saveNote(note)">Save</button>
+	<button class="btn" ng-click="edit(note)">{{btnVal}}</button>
 </div>

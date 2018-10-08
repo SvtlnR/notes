@@ -4,7 +4,6 @@ notesApp.controller("CreateNotesController", function($scope, $location, notesSe
 			$scope.errors = "Input title!";
 			return false;
 		}
-		console.log(note.ttl);
 		$scope.errors = "";
 		notesService.addNote(note.ttl, note.description);
 		$location.path('/notes');
