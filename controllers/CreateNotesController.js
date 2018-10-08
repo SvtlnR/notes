@@ -1,9 +1,10 @@
 notesApp.controller("CreateNotesController", function($scope, $location, notesService) {
 	$scope.saveNote = function(note) {
-		if (angular.isUndefined(note)) {
+		if (angular.isUndefined(note)||angular.isUndefined(note.ttl)) {
 			$scope.errors = "Input title!";
 			return false;
 		}
+		console.log(note.ttl);
 		$scope.errors = "";
 		notesService.addNote(note.ttl, note.description);
 		$location.path('/notes');
